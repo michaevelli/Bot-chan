@@ -73,6 +73,8 @@ client.on("message", message => {
 
 client.login(config.token);
 
+//
+
 var readline = require('readline');
 var rl = readline.createInterface({
   input: process.stdin,
