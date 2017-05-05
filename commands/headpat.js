@@ -3,7 +3,7 @@ const config = require("../config.json");
 exports.run = (client, message, args) => {
     console.log(message.author.id + " ran headpat on " + message.channel.id);
     if(message.author.id === config.master){
-        switch(rand(0,4)){
+        switch(rand(0,5)){
         case 0:
             message.channel.send("~(^o^)~").catch(console.error);
             break;
@@ -19,13 +19,15 @@ exports.run = (client, message, args) => {
         case 4:
             message.channel.send("^-^").catch(console.error);
             break;
+        case 5:
+            message.channel.send("おかえりご主人さま").catch(console.error);
         default:
             message.channel.send("error: default case reached /m. does mod match number of case?").catch(console.error);
     }
         return;
     }
 
-    switch(rand(0,9)){
+    switch(rand(0,13)){
         case 0:
             message.channel.send("don't touch me").catch(console.error);
             break;
@@ -54,8 +56,18 @@ exports.run = (client, message, args) => {
             message.channel.send("get away from me you trash").catch(console.error);
             break;
         case 9:
-            message.channel.send("Mm!~").catch(console.error);
+            message.channel.send("いじめはダメ！").catch(console.error);
             break;
+        case 10:
+            message.channel.send("そこに触らないで").catch(console.error);
+            break;
+        case 11:
+            message.channel.send("いたい！").catch(console.error);
+            break;
+        case 12:
+            message.channel.send("えええええ。。。きもい").catch(console.error);
+        case 13:
+            message.channel.send("Mm!~").catch(console.error);
         default:
             message.channel.send("error: default case reached. does mod match number of case?").catch(console.error);
     }
