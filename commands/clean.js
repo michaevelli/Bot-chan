@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
             //    })
             //}
             message.channel.send("> Cleaned!").catch(console.error);
-            console.log(message.author.id +" ran clean on " message.channel.id);
+            console.log(message.author.id + " ran clean on " + message.channel.id);
         }
 
     };

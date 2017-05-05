@@ -1,7 +1,7 @@
 const config = require("../config.json");
 
 exports.run = (client, message, args) => {
-    console.log(message.author.id +" ran headpat on " message.channel.id);
+    console.log(message.author.id + " ran headpat on " + message.channel.id);
     if(message.author.id === config.master){
         switch(rand(0,4)){
         case 0:
