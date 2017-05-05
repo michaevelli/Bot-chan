@@ -1,6 +1,6 @@
 {
   "name": "Bot-chan",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "my bot",
   "main": "web.js",
   "scripts": {
@@ -11,5 +11,11 @@
     "heroku"
   ],
   "author": "michael",
-  "license": "no"
+  "license": "no",
+  "engines": {
+    "node": "6.10.2"
+  },
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
 }
