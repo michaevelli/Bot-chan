@@ -2,4 +2,4 @@ discord.js==11.1.0
 aiohttp
 websockets
 chardet
-express
+express==4.15.2
