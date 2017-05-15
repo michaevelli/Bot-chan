@@ -34,10 +34,10 @@ exports.run = (client, message, args) => {
     }
     if(args[0] == "lock"){
         channel.overwritePermissions(message.guild.roles.find("name", "@everyone"), {'CONNECT': false});
-        message.channel.send("Locking" + channel.name).catch(console.error);
+        message.channel.send("Locking " + channel.name).catch(console.error);
     } else if (args[0] == "unlock"){
         channel.overwritePermissions(message.guild.roles.find("name", "@everyone"), {'CONNECT': true});
-        message.channel.send("unlocking" + channel.name).catch(console.error);
+        message.channel.send("Unlocking " + channel.name).catch(console.error);
     } else {
         message.channel.send("Incorrect syntax. Try: ```~/vc <lock|unlock> <-a|>```");
     }
