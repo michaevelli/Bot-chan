@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
             //    })
             //}
             if (args[0] == "all") {
-                message.channel.bulkDelete(message.channel.messages);
+                message.channel.bulkDelete(message.channel.fetchMessages());
                 console.log("oh no");
             } else {
                 message.channel.bulkDelete(n);
