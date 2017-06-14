@@ -250,7 +250,7 @@ var d = new Date();
 
 var http = require("http");
 setInterval(function() {
-    if( !(d.getUTCHours() >= 15 && d.getUTCHours() <= 23) ){
+    if( /*!(d.getUTCHours() >= 15 && d.getUTCHours() <= 23)*/ true ){
         http.get("http://ancient-sea-31927.herokuapp.com");
         console.log("ping itself");
     }
