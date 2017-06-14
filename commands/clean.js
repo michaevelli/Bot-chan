@@ -47,14 +47,10 @@ exports.run = (client, message, args) => {
         i++;
     }*/
     while(n > 100){
-        message.channel.fetchMessages({limit: 100}).then(mess => {
-            mess.deleteAll();
-        });
+        message.channel.bulkDelete(n);
         n -= 100;
     }
-    message.channel.fetchMessages({limit: n}).then(mess => {
-        mess.deleteAll();
-    });
+    message.channel.bulkDelete(n);
 
     message.channel.send("> Cleaned!").catch(console.error);
     console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
