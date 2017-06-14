@@ -38,7 +38,7 @@ exports.run = (client, message, args) => {
     }
     for(i = 0; i < n; i++){
         if(message.channel.lastMessageID != undefined){
-            message.channel.fetchMessage(message.channel.lastMessageID).then(mess => {
+            message.channel.fetchMessages({limit: 1}).then(mess => {
                 console.log(mess.delete());
             });
         } else {
