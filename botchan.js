@@ -243,3 +243,15 @@ function normalize_rgb_value(color, m) {
 function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
+
+
+var d = new Date();
+
+
+var http = require("http");
+setInterval(function() {
+    if( !(d.getUTCHours() >= 15 && d.getUTCHours() <= 23) ){
+        http.get("http://ancient-sea-31927.herokuapp.com");
+        console.log("ping itself");
+    }
+}, /*900000*/ 1000);
