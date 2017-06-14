@@ -47,7 +47,7 @@ exports.run = (client, message, args) => {
         i++;
     }*/
     while(n > 100){
-        message.channel.bulkDelete(n);
+        message.channel.bulkDelete(100);
         n -= 100;
     }
     message.channel.bulkDelete(n);
