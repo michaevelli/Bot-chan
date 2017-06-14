@@ -1,8 +1,11 @@
 exports.run = (client, message, args) => {
-    message.channel.send("ping! " + message.guild.roles.get("324502111188418561").color).catch(console.error);
+    role = message.guild.roles.get("324502111188418561");
 
-    //x = (MATH.random()*1000000)%10000000;
-    message.guild.roles.get("324502111188418561").setColor('#00FF00');
+    message.channel.send("ping! " + role.color).catch(console.error);
+
+    role.setColor('#00FF00');
+
+    //role.setColor(changeHue(role.hexColor, 100));
 
     console.log(message.author.id + " ran pong on " + message.channel.id);
 
