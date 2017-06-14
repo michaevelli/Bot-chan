@@ -72,7 +72,7 @@ client.on("message", message => {
 client.login(config.token);
 
 var interval = setInterval (function(){
-    //message.guild.roles.get("name", "rainbow")
+    role.setColor(changeHue(role.hexColor, 50));
 }, 1000)
 
 //
