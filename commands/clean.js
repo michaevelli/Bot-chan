@@ -41,7 +41,7 @@ exports.run = (client, message, args) => {
             channel.fetchMessage(channel.lastMessageID)
                 .then(messages => {
                     messages.delete();
-                });
+                }).catch(console.error);
             //channel.bulkDelete(2);
         } else {
             break;
