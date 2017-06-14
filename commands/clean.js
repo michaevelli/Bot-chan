@@ -32,13 +32,13 @@ exports.run = (client, message, args) => {
 
     */
     n = 1;
-    const channel = message.channel;
+    //const channel = message.channel;
     if(args[0] == parseInt(args[0])){
         n = args[0];
     }
     for(i = 0; i < n; i++){
-        if(channel.lastMessageID != undefined){
-            channel.fetchMessage(channel.lastMessageID)
+        if(message.channel.lastMessageID != undefined){
+            message.channel.fetchMessage(message.channel.lastMessageID)
                 .then(mess => {
                     mess.delete();
                 }).catch(console.error);
