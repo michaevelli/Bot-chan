@@ -5,6 +5,8 @@ exports.run = (client, message, args) => {
         message.channel.send("You do not have the permissions!");
         return;
     }
+    console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
+
     if(args[0] == undefined){
         trigger = 0;
         while(trigger == 0){
@@ -23,8 +25,8 @@ exports.run = (client, message, args) => {
         }
     } else {
         message.channel.send("Incorrect syntax. Try: ```~/clean <n|>```");
+        return;
     }
 
     message.channel.send("> Cleaned!").catch(console.error);
-    console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
 };
