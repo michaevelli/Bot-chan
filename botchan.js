@@ -72,7 +72,7 @@ client.on("message", message => {
 client.login(config.token);
 
 var interval = setInterval (function(){
-    //client.channels.get("306391339031986177").send("test");
+    //message.guild.roles.get("name", "rainbow")
 }, 1000)
 
 //
