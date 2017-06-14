@@ -36,24 +36,15 @@ exports.run = (client, message, args) => {
     if(args[0] == parseInt(args[0])){
         n = args[0];
     }
-    /*for(i = 0; i < n; i++){
+    for(i = 0; i < n; i++){
         if(channel.lastMessageID != undefined){
-            mess = channel.fetchMessage(channel.lastMessageID);
-            mess.delete();
+            deleteMessage(getMessage(channel,channel.lastMessageID));
+            
         } else {
             break;
         }
         i++;
-    }*/
-    const messlist = client.messages
-    for(messageStep in messlist){
-        if(messageStep.channel == channel){
-            messageStep.delete();
-        }
     }
-
-
-
 
 
     message.channel.send("> Cleaned!").catch(console.error);
