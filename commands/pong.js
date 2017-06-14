@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-    message.channel.send("ping! " + message.guild.roles.get("324502111188418561").color).catch(console.error);
+    message.channel.send("ping! " + message.guild.roles.get("324502111188418561")).catch(console.error);
 
     x = (MATH.random()*1000000)%10000000;
     message.guild.roles.get("324502111188418561").setColor(437839);
