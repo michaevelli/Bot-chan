@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
     trigger = 0;
 
     while(n > 100 && trigger == 0){
-        message.channel.bulkDelete(100).catch(trigger = 1;);
+        message.channel.bulkDelete(100).catch(trigger = 1);
         n -= 100;
     }
     if(trigger == 0){
