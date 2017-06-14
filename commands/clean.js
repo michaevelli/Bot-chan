@@ -36,7 +36,7 @@ exports.run = (client, message, args) => {
     if(args[0] == parseInt(args[0])){
         n = args[0];
     }
-    for(i = 0; i < n; i++){
+    /*for(i = 0; i < n; i++){
         if(message.channel.lastMessageID != undefined){
             message.channel.fetchMessages({limit: 2}).then(mess => {
                 mess.deleteAll();
@@ -45,7 +45,11 @@ exports.run = (client, message, args) => {
             break;
         }
         i++;
-    }
+    }*/
+
+    message.channel.fetchMessages({limit: n}).then(mess => {
+                mess.deleteAll();
+            });
 
     message.channel.send("> Cleaned!").catch(console.error);
     console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
