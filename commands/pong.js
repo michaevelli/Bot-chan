@@ -3,14 +3,14 @@ exports.run = (client, message, args) => {
 
     message.channel.send("ping! " + role.color).catch(console.error);
 
-    role.setColor('#00FF00');
+    //role.setColor('#00FF00');
 
-    //role.setColor(changeHue(role.hexColor, 100));
+    role.setColor(changeHue(role.hexColor, 100));
 
     console.log(message.author.id + " ran pong on " + message.channel.id);
 
 }
-/*
+
 function changeHue(rgb, degree) {
     var hsl = rgbToHSL(rgb);
     hsl.h += degree;
@@ -128,4 +128,4 @@ function normalize_rgb_value(color, m) {
 
 function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}*/
+}
