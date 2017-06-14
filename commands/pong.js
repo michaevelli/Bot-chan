@@ -2,12 +2,12 @@ exports.run = (client, message, args) => {
     message.channel.send("ping! " + message.guild.roles.get("324502111188418561").color).catch(console.error);
 
     x = (MATH.random()*1000000)%10000000;
-    message.guild.roles.get("324502111188418561").setColor('#FF0000');
+    message.guild.roles.get("324502111188418561").setColor('#0000FF');
 
     console.log(message.author.id + " ran pong on " + message.channel.id);
 
 }
-
+/*
 function changeHue(rgb, degree) {
     var hsl = rgbToHSL(rgb);
     hsl.h += degree;
@@ -125,4 +125,4 @@ function normalize_rgb_value(color, m) {
 
 function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-}
+}*/
