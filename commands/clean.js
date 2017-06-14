@@ -39,7 +39,7 @@ exports.run = (client, message, args) => {
     for(i = 0; i < n; i++){
         if(channel.lastMessageID != undefined){
             message = channel.fetchMessage(channel.lastMessageID);
-            message.delete();
+            message.delete(1);
         } else {
             break;
         }
