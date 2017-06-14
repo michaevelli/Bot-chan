@@ -11,13 +11,19 @@ exports.run = (client, message, args) => {
             //for(i = 0; i < n; i++){
             //    message.channel.fetchMessages().then(messages => {
             //        if(messages.array().length > 2){
-                        message.channel.bulkDelete(n);//.catch(console.error);
+            //            message.channel.bulkDelete(n);//.catch(console.error);
             //        };
             //    })
             //}
-            message.channel.send("> Cleaned!").catch(console.error);
-            console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
+            if (args[0] == "all") {
+                message.channel.bulkDelete(message.channel.messages);
+            } else {
+                message.channel.bulkDelete(n);
+            }
+
         }
+        message.channel.send("> Cleaned!").catch(console.error);
+        console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
 
     };
 };
