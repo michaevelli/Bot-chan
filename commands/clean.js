@@ -1,7 +1,11 @@
 const config = require("../config.json");
 
 exports.run = (client, message, args) => {
-    if(message.author.id === config.master){
+    if(message.author.id != config.master){
+        message.channel.send("You do not have the permissions!");
+        return;
+    }
+    /*
         n = 100;
         if(args[0] == parseInt(args[0])){
             n = args[0];
@@ -26,5 +30,25 @@ exports.run = (client, message, args) => {
         message.channel.send("> Cleaned!").catch(console.error);
         console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
 
-    };
+    */
+    n = 1;
+    const channel = message.channel;
+    if(args[0] == parseInt(args[0])){
+        n = args[0];
+    }
+    for(i = 0; i < n; i++){
+        if(channel.lastMessageID != undefined){
+            channel.fetchMessage(channel.lastMessageID).delete();
+        } else {
+            break;
+        }
+        i++;
+    }
+
+
+
+
+
+    message.channel.send("> Cleaned!").catch(console.error);
+    console.log(message.author.id + " ran clean on " + message.channel.id + " | param: " + args[0]);
 };
