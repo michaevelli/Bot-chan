@@ -254,4 +254,4 @@ setInterval(function() {
         http.get("http://ancient-sea-31927.herokuapp.com");
         console.log("ping itself");
     }
-}, /*900000*/ 1000);
+}, 900000);
