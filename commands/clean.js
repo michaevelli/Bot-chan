@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
         n -= 100;
     }
     if(trigger == 0){
-        message.channel.bulkDelete(n);
+        message.channel.bulkDelete(n).catch();
     }
 
     message.channel.send("> Cleaned!").catch(console.error);
