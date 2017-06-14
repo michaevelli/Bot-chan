@@ -38,8 +38,11 @@ exports.run = (client, message, args) => {
     }
     for(i = 0; i < n; i++){
         if(channel.lastMessageID != undefined){
-            //channel.fetchMessage(channel.lastMessageID).delete();
-            channel.bulkDelete(2);
+            channel.fetchMessage(channel.lastMessageID)
+                .then(messages => {
+                    messages.delete();
+                });
+            //channel.bulkDelete(2);
         } else {
             break;
         }
