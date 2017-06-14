@@ -36,18 +36,14 @@ exports.run = (client, message, args) => {
     if(args[0] == parseInt(args[0])){
         n = args[0];
     }
-    /*for(i = 0; i < n; i++){
+    for(i = 0; i < n; i++){
         if(channel.lastMessageID != undefined){
             channel.fetchMessage(channel.lastMessageID).delete();
         } else {
             break;
         }
         i++;
-    }*/
-    message.channel.fetchMessages()
-        .then(messages => {
-            message.channel.bulkDelete(messages);
-        })
+    }
 
 
     message.channel.send("> Cleaned!").catch(console.error);
