@@ -72,7 +72,7 @@ client.on("message", message => {
 client.login(config.token);
 
 var interval = setInterval (function(){
-    client.channels.get("306391339031986177").send("test");
+    //client.channels.get("306391339031986177").send("test");
 }, 1000)
 
 //
