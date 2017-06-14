@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     if(args[0] == undefined){
         trigger = 0;
         while(trigger == 0){
-            message.channel.bulkDelte(n).catch(trigger = 1);
+            message.channel.bulkDelte(100).catch(trigger = 1);
         }
     } else if (args[0] == parseInt(args[0])){
         n = args[0] + 1;
