@@ -55,8 +55,6 @@ client.on("message", message => {
     if (!message.content.startsWith(config.prefix)) return;
 
 
-
-
     let command = message.content.split(" ")[0];
     command = command.slice(config.prefix.length);
 
@@ -72,6 +70,10 @@ client.on("message", message => {
 });
 
 client.login(config.token);
+
+var interval = setInterval (function(){
+    client.channels.get("306391339031986177").send("test");
+}, 1000)
 
 //
 /*
