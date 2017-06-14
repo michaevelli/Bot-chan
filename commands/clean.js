@@ -39,8 +39,8 @@ exports.run = (client, message, args) => {
     for(i = 0; i < n; i++){
         if(channel.lastMessageID != undefined){
             channel.fetchMessage(channel.lastMessageID)
-                .then(messages => {
-                    messages.delete();
+                .then(mess => {
+                    mess.delete();
                 }).catch(console.error);
             //channel.bulkDelete(2);
         } else {
