@@ -1,6 +1,7 @@
 exports.run = (client, message, args) => {
     message.channel.send("Beep Boop. I am a bot.").catch(console.error);
-    message.channel.send("```<commands> \n \
+    message.channel.send("```md \
+<commands> \n \
 clean <n|> \n \
     clear chat channel \n \
 vc <lock/unlock> <-a|> \n \
