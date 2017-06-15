@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
             message.channel.bulkDelete(n).catch();
         }
     } else {
-        message.channel.send("Incorrect syntax. Try: ```~/clean <n|>```");
+        message.channel.send("Invalid Syntax```Usage: ~/clean [n]```");
         return;
     }
 
