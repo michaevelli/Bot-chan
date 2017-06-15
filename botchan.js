@@ -76,7 +76,7 @@ setTimeout (function(){
         //role = message.guild.roles.get("324502111188418561");
         role = client.guilds.get("265767904065224717").roles.find("name", "rainbow");
         role.setColor(changeHue(role.hexColor, 1));
-    }, 20)
+    }, 50)
 },1000);
 
 //
