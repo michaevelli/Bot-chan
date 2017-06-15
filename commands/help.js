@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
 <commands>\n\
 ~/clean [n]\n\
 #   clear chat channel\n\
-~/vc lock|unlock [-a]\n\
+~/vc <lock|unlock> [-a]\n\
 #    lock/unlock voice channels\n\
 ~/headpat\n\
 #    headpat\n\
