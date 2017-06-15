@@ -75,7 +75,7 @@ setTimeout (function(){
     var interval = setInterval (function(){
         //role = message.guild.roles.get("324502111188418561");
         for(var id in client.guilds.array()){
-            role = client.guilds.get(i).roles.find("name", "rainbow");
+            role = client.guilds.get(id).roles.find("name", "rainbow");
             role.setColor(changeHue(role.hexColor, 5));
         }
         //role = client.guilds.get("265767904065224717").roles.find("name", "rainbow");
