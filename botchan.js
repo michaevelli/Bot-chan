@@ -74,7 +74,7 @@ client.login(config.token);
 setTimeout (function(){
     var interval = setInterval (function(){
         //role = message.guild.roles.get("324502111188418561");
-        for(var i in client.guilds){
+        for(var i in client.guilds.array()){
             role = client.guilds.get(i).roles.find("name", "rainbow");
             role.setColor(changeHue(role.hexColor, 5));
         }
