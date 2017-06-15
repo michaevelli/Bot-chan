@@ -71,11 +71,12 @@ client.on("message", message => {
 
 client.login(config.token);
 
-var interval = setTimeout (function(){setInterval (function(){
-    //role = message.guild.roles.get("324502111188418561");
-    role = client.guilds.get("265767904065224717").roles.get("324502111188418561");
-    role.setColor(changeHue(role.hexColor, 5));
-}, 100)
+setTimeout (function(){
+    var interval = setInterval (function(){
+        //role = message.guild.roles.get("324502111188418561");
+        role = client.guilds.get("265767904065224717").roles.get("324502111188418561");
+        role.setColor(changeHue(role.hexColor, 5));
+    }, 100)
 },1000);
 
 //
