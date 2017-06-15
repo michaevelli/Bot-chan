@@ -46,7 +46,6 @@ fs.readdir("./events/", (err, files) => {
 
 client.on("message", message => {
     if (message.author.bot){
-        //if(message.content == "Cleaned!"){
         if(message.content.startsWith(">")){
             message.delete(1000);
         }
@@ -70,6 +69,7 @@ client.on("message", message => {
 });
 
 client.login(config.token);
+
 
 setTimeout (function(){
     var interval = setInterval (function(){
@@ -251,7 +251,11 @@ var http = require("http");
 setInterval(function() {
     var d = new Date();
     if( !(d.getUTCHours() >= 15 && d.getUTCHours() <= 9) ){
-        http.get("http://ancient-sea-31927.herokuapp.com").catch(console.error);
-        console.log("ping itself");
+        try {
+            http.get("http://ancient-sea-31927.herokuapp.com");
+            console.log("Ping Self");
+        } catch(err) {
+            console.log(err);
+        }
     }
 }, 600000);
