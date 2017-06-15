@@ -24,11 +24,13 @@ exports.run = (client, message, args) => {
             message.channel.send("Invalid Syntax```Usage: ~/vc lock|unlock [-a]```");
         }
         return;
+    } else {
+        message.channel.send("Invalid Syntax```Usage: ~/vc lock|unlock [-a]```");
     }
 
 
     const channel = message.member.voiceChannel;
-    if(channel == undefined){
+    if(channel == undefined && (args[0] == "lock" || args[0] == "unlock")){
         message.channel.send("You are not currently in a voice channel!")
         return;
     }
