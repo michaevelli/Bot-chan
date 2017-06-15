@@ -247,10 +247,9 @@ function rgbToHex(r, g, b) {
 
 
 var d = new Date();
-
-
 var http = require("http");
 setInterval(function() {
+    var d = new Date();
     if( !(d.getUTCHours() >= /*15*/1 && d.getUTCHours() <= /*23*/9) ){
         http.get("http://ancient-sea-31927.herokuapp.com").catch(console.error);
         console.log("ping itself");
