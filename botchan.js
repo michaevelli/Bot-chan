@@ -226,7 +226,7 @@ function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
-
+/*
 var d = new Date();
 var http = require("http");
 setInterval(function() {
@@ -239,4 +239,4 @@ setInterval(function() {
             console.log(err);
         }
     }
-}, 600000);
+}, 600000);*/
