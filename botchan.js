@@ -226,10 +226,9 @@ function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
-/*
-var d = new Date();
+
 var http = require("http");
-setInterval(function() {
+var pinger = setInterval(function() {
     var d = new Date();
     if( !(d.getUTCHours() >= 15 && d.getUTCHours() <= 9) ){
         try {
@@ -239,4 +238,4 @@ setInterval(function() {
             console.log(err);
         }
     }
-}, 600000);*/
+}, 600000);
