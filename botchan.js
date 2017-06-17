@@ -230,7 +230,7 @@ function rgbToHex(r, g, b) {
 var http = require("http");
 var pinger = setInterval(function() {
     var d = new Date();
-    if( !(d.getUTCHours() >= 15 && d.getUTCHours() <= 9) ){
+    if( !(d.getUTCHours() >= 14 && d.getUTCHours() <= 23) ){
         try {
             http.get("http://ancient-sea-31927.herokuapp.com");
             console.log("Ping Self");
