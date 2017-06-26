@@ -1,6 +1,5 @@
 
-
-function changeHue(rgb, degree) {
+exports.changeHue = function(rgb, degree) {
     var hsl = rgbToHSL(rgb);
     hsl.h += degree;
     if (hsl.h > 360) {
