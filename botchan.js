@@ -55,10 +55,10 @@ setTimeout (function(){
     var interval = setInterval (function(){
         client.guilds.forEach(function(guild){
             role = guild.roles.find("name", "rainbow");
-            role.setColor(color.changeHue(role.hexColor, 1));
+            role.setColor(color.changeHue(role.hexColor, 5));
             //console.log(role.hexColor);
         });
-    }, 20);
+    }, 100);
 },1000);
 
 
