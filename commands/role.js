@@ -1,6 +1,11 @@
 exports.run = (client, message, args) => {
     console.log(message.author.id + " ran role on " + message.channel.id + " | param: " + args[0] + " , " + args[1]);
 
+    if(args[0] == undefined){
+        message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [lock|unlock]```");
+        return;
+    }
+
     role = message.guild.roles.find("name", args[0]);
     if(role == undefined){
         message.channel.send("No such role \"" + args[0] + "\" found on server.");
@@ -22,11 +27,6 @@ exports.run = (client, message, args) => {
         if(obj.roles[i] == role.name){
             canedit = 1;
         }
-    }
-
-    if(args[0] == undefined){
-        message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [lock|unlock]```");
-        return;
     }
 
     //status
