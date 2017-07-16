@@ -5,7 +5,6 @@ const fs = require("fs");
 var color = require('./functions/colorchange.js');
 
 const config = require("./config.json");
-//eval(color.readFileSync('functions/colorchange.js'+''));
 
 // This loop reads the /events/ folder and attaches each event file to the appropriate event.
 fs.readdir("./events/", (err, files) => {
@@ -25,8 +24,8 @@ client.on("message", message => {
         }
         return;
     };
-    if (!message.content.startsWith(config.prefix)) return;
 
+    if (!message.content.startsWith(config.prefix)) return;
 
     let command = message.content.split(" ")[0];
     command = command.slice(config.prefix.length);
@@ -50,17 +49,22 @@ client.login(config.token);
 
 
 
-//rainbow function.
+//colorchange
 setTimeout (function(){
     var interval = setInterval (function(){
         client.guilds.forEach(function(guild){
             role = guild.roles.find("name", "rainbow");
             role.setColor(color.changeHue(role.hexColor, 5));
-            //console.log(role.hexColor);
         });
     }, 100);
 },1000);
 
+/*
+//tzuyu
+var interval2 = setInterval (function(){
+    //
+}, 1000);
+*/
 
 
 var express = require('express');

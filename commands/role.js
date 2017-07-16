@@ -24,6 +24,11 @@ exports.run = (client, message, args) => {
         }
     }
 
+    if(args[0] == undefined){
+        message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [lock|unlock]```");
+        return;
+    }
+
     //status
     if(args[1] == undefined){
         if(trigger == 0){
@@ -48,12 +53,11 @@ exports.run = (client, message, args) => {
             }
             message.member.removeRole(role);
             message.channel.send("You have now left role " + args[0]);
+        } else {
+            message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [lock|unlock]```");
         }
     } else {
         message.channel.send("You do not have the permissions to access that role");
     }
 
-
-
-    
 }

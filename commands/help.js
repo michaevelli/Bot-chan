@@ -6,6 +6,8 @@ exports.run = (client, message, args) => {
 #   clear chat channel\n\
 ~/vc <lock|unlock> [-a]\n\
 #    lock/unlock voice channels\n\
+~/role <rolename> [join|leave]\n\
+#    join/leave role\n\
 ~/headpat\n\
 #    headpat\n\
 ~/ping\n\
