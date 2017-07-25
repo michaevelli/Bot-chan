@@ -81,7 +81,7 @@ setTimeout (function(){
                 })
             }
         });
-    }, 60000);
+    }, 360000);
 },2000);
 
 // https://www.reddit.com/r/tzuyu/random.json
