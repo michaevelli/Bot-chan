@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "discord.js": "^11.1.0",
+    "snoowrap": "^1.14.1",
     "express":"^4.15.2"
   }
 }

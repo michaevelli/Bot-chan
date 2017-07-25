@@ -1,5 +1,6 @@
 
 const Discord = require('discord.js');
+const request = require('request');
 const client = new Discord.Client();
 const fs = require("fs");
 var color = require('./functions/colorchange.js');
@@ -54,25 +55,36 @@ setTimeout (function(){
     var interval = setInterval (function(){
         client.guilds.forEach(function(guild){
             role = guild.roles.find("name", "rainbow");
-            role.setColor(color.changeHue(role.hexColor, 5));
+            if(role != undefined){
+                role.setColor(color.changeHue(role.hexColor, 5));
+            }
         });
     }, 100);
-},1000);
+},2000);
 
 
 //tzuyu
-/*
 setTimeout (function(){
     var interval2 = setInterval (function(){
     //post picture/gif of tzuyu in channel
-        client.guilds.forEach(function(guild){
-            channel = guild.channels.find("name", "tzuyu");
-            channel.send("tzuyu");
-        })
-    }, 1000);
-},1000);
-*/
+        var url = 'https://www.reddit.com/r/tzuyu/random.json';
+        request(url, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                tzuyuJSON = JSON.parse(body);
+                link = tzuyuJSON[0].data.children[0].data.url;
+                client.guilds.forEach(function(guild){
+                    channel = guild.channels.find("name", "tzuyu");
+                    if(channel != undefined){
+                        channel.send(link);
+                    }
+                })
+            }
+        });
+    }, 60000);
+},2000);
 
+// https://www.reddit.com/r/tzuyu/random.json
+// [{"data":{"children":[{"url":"url.url.com"}]}}]
 
 var express = require('express');
 var app     = express();

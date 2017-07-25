@@ -1,4 +1,5 @@
 discord.js==11.1.0
+snoowrap==1.14.1
 aiohttp
 websockets
 chardet
