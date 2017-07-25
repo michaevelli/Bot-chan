@@ -54,7 +54,7 @@ exports.run = (client, message, args) => {
             message.member.removeRole(role);
             message.channel.send("You have now left role " + args[0]);
         } else {
-            message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [lock|unlock]```");
+            message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [join|leave]```");
         }
     } else {
         message.channel.send("You do not have the permissions to access that role");
