@@ -59,12 +59,18 @@ setTimeout (function(){
     }, 100);
 },1000);
 
-/*
+
 //tzuyu
-var interval2 = setInterval (function(){
-    //
-}, 1000);
-*/
+setTimeout (function(){
+    var interval2 = setInterval (function(){
+    //post picture/gif of tzuyu in channel
+        client.guilds.forEach(function(guild){
+            channel = guild.channel.find("name", "tzuyu");
+            channel.send("tzuyu");
+        })
+    }, 1000);
+},1000);
+
 
 
 var express = require('express');
