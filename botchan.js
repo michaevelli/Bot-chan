@@ -81,17 +81,13 @@ setTimeout (function(){
                 })
             }
         });
-    }, 360000);
+    }, 3600000);
 },2000);
 
-// https://www.reddit.com/r/tzuyu/random.json
-// [{"data":{"children":[{"url":"url.url.com"}]}}]
 
 var express = require('express');
 var app     = express();
-
 app.set('port', (process.env.PORT || 5000));
-
 //For avoidong Heroku $PORT error
 app.get('/', function(request, response) {
     var result = 'App is running'
@@ -99,8 +95,6 @@ app.get('/', function(request, response) {
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
-
-
 
 
 //ping self to prevent timeout
