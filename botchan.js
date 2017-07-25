@@ -76,6 +76,7 @@ setTimeout (function(){
                     channel = guild.channels.find("name", "tzuyu");
                     if(channel != undefined){
                         channel.send(link);
+                        console.log("sent " + link + " to " +  channel.id);
                     }
                 })
             }
