@@ -2,7 +2,7 @@ exports.run = (client, message, args) => {
     console.log(message.author.id + " ran role on " + message.channel.id + " | param: " + args[0] + " , " + args[1]);
 
     if(args[0] == undefined){
-        message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [lock|unlock]```");
+        message.channel.send("Invalid Syntax```Usage: ~/role <rolename> [join|leave]```");
         return;
     }
 
