@@ -65,7 +65,7 @@ setTimeout (function(){
     var interval2 = setInterval (function(){
     //post picture/gif of tzuyu in channel
         client.guilds.forEach(function(guild){
-            channel = guild.channel.find("name", "tzuyu");
+            channel = guild.channels.find("name", "tzuyu");
             channel.send("tzuyu");
         })
     }, 1000);
