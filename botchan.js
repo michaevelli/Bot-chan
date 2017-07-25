@@ -61,6 +61,7 @@ setTimeout (function(){
 
 
 //tzuyu
+/*
 setTimeout (function(){
     var interval2 = setInterval (function(){
     //post picture/gif of tzuyu in channel
@@ -70,7 +71,7 @@ setTimeout (function(){
         })
     }, 1000);
 },1000);
-
+*/
 
 
 var express = require('express');
