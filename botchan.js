@@ -64,6 +64,7 @@ setTimeout (function(){
 
 
 //tzuyu
+/*
 setTimeout (function(){
     var interval2 = setInterval (function(){
     //post picture/gif of tzuyu in channel
@@ -82,6 +83,29 @@ setTimeout (function(){
             }
         });
     }, 3600000);
+},2000);*/
+setTimeout (function(){
+    var interval2 = setInterval (function(){
+        //post picture/gif of tzuyu in channel
+        var d = new Date();
+        if(d.getUTCHours == 11 || d.getUTCHours == 23){
+            var url = 'https://www.reddit.com/r/tzuyu/random.json';
+            request(url, function (error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    tzuyuJSON = JSON.parse(body);
+                    link = tzuyuJSON[0].data.children[0].data.url;
+                    client.guilds.forEach(function(guild){
+                        channel = guild.channels.find("name", "tzuyu");
+                        if(channel != undefined){
+                            channel.send(link);
+                            console.log("sent " + link + " to " +  channel.id);
+                        }
+                    })
+                }
+            });
+
+        }
+    }, 60000);
 },2000);
 
 
