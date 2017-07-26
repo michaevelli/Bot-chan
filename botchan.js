@@ -84,12 +84,11 @@ setTimeout (function(){
         });
     }, 3600000);
 },2000);*/
-var trigger = 0;
 setTimeout (function(){
     var interval2 = setInterval (function(){
         //post picture/gif of tzuyu in channel
         var d = new Date();
-        if((d.getUTCHours == 11 || d.getUTCHours == 23) && trigger == 0){
+        if((d.getUTCHours == 11 || d.getUTCHours == 23) && d.getUTCMinutes == 0){
             var url = 'https://www.reddit.com/r/tzuyu/random.json';
             request(url, function (error, response, body) {
                 if (!error && response.statusCode == 200) {
@@ -104,9 +103,6 @@ setTimeout (function(){
                     })
                 }
             });
-            trigger = 1;
-        } else {
-            trigger = 0;
         }
     }, 60000);
 },2000);
