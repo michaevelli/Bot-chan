@@ -84,8 +84,8 @@ setTimeout (function(){
         });
     }, 3600000);
 },2000);*/
+var trigger = 0;
 setTimeout (function(){
-    var trigger = 0;
     var interval2 = setInterval (function(){
         //post picture/gif of tzuyu in channel
         var d = new Date();
