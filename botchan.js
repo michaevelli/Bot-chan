@@ -94,7 +94,7 @@ setTimeout (function(){
 setTimeout (function(){
     var interval2 = setInterval (function(){
         var d = new Date();
-        if((d.getUTCHours() == 11 || d.getUTCHours() == 23) && d.getUTCMinutes() == 9){
+        if((d.getUTCHours() == 11 || d.getUTCHours() == 23) && d.getUTCMinutes() == 0){
             reddit.redditrandom(client);
         }
     }, 60000);
