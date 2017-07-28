@@ -19,14 +19,20 @@ exports.run = (client, message, args) => {
         }
     });
 
+    var canedit = 0;
+    /*
     var fs = require('fs');
     var obj = JSON.parse(fs.readFileSync('./data/roleeditable.JSON', 'utf8'));
 
     var canedit = 0;
+
     for(i in obj.roles){
         if(obj.roles[i] == role.name){
             canedit = 1;
         }
+    }*/
+    if(role.name.split("_")[1] == "u"){
+        canedit = 1;
     }
 
     //status
