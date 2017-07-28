@@ -1,3 +1,5 @@
+const request = require('request');
+
 exports.redditrandom = function(client){
     client.channels.forEach(function(channel){
         name = channel.name;

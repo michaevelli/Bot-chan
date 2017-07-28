@@ -94,7 +94,7 @@ setTimeout (function(){
 setTimeout (function(){
     var interval2 = setInterval (function(){
         var d = new Date();
-        if((d.getUTCHours() == 11 || d.getUTCHours() == 23) && d.getUTCMinutes() == 0){
+        if((d.getUTCHours() == 11 || d.getUTCHours() == 23) && d.getUTCMinutes() == 9){
             reddit.redditrandom(client);
         }
     }, 60000);
@@ -113,6 +113,7 @@ app.get('/', function(request, response) {
 
 
 //ping self to prevent timeout
+/* unnecessary when runnning in bot mode
 var http = require("http");
 var pinger = setInterval(function() {
     var d = new Date();
@@ -125,3 +126,4 @@ var pinger = setInterval(function() {
         }
     }
 }, 600000);
+*/
