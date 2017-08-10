@@ -1,7 +1,7 @@
 const request = require('request');
 
-exports.redditrandom = function(client){
-    client.channels.forEach(function(channel){
+exports.redditrandom = function(client, guild){
+    guild.channels.forEach(function(channel){
         name = channel.name;
         if(name.split("_")[1] == "reddit"){
             var url = 'https://reddit.com/r/' + name.split("_")[0] + '/random.json'

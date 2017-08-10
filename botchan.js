@@ -64,38 +64,14 @@ setTimeout (function(){
 },2000);
 
 
-//tzuyu
-/*
-var link
 setTimeout (function(){
     var interval2 = setInterval (function(){
-        //post picture/gif of tzuyu in channel
         var d = new Date();
         if((d.getUTCHours() == 11 || d.getUTCHours() == 23) && d.getUTCMinutes() == 0){
-            var url = 'https://www.reddit.com/r/tzuyu/random.json';
-            request(url, function (error, response, body) {
-                if (!error && response.statusCode == 200) {
-                    tzuyuJSON = JSON.parse(body);
-                    link = tzuyuJSON[0].data.children[0].data.url;
-                }
-            });
-            client.guilds.forEach(function(guild){
-                channel = guild.channels.find("name", "tzuyu");
-                if(channel != undefined){
-                    channel.send(link);
-                    console.log("sent " + link + " to " +  channel.id);
-                }
-             })
+            reddit.redditrandom(client, client.guilds.find("id", "265767904065224717"));
         }
-    }, 60000);
-},2000);
-*/
-
-setTimeout (function(){
-    var interval2 = setInterval (function(){
-        var d = new Date();
-        if((d.getUTCHours() == 11 || d.getUTCHours() == 23) && d.getUTCMinutes() == 0){
-            reddit.redditrandom(client);
+        if(d.getUTCMinutes() == 0){
+            reddit.redditrandom(client, client.guilds.find("id","167895139518382081"));
         }
     }, 60000);
 },2000);
