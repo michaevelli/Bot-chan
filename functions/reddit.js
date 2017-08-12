@@ -1,4 +1,5 @@
 const request = require('request');
+const random = require('random');
 
 exports.redditrandom = function(client, guild){
     guild.channels.forEach(function(channel){
@@ -35,6 +36,23 @@ exports.redditplus = function(client, guild, score){
             channel.send(link);
             console.log("sent " + link + " to " + channel.id);
             console.log(vote);
+        }
+    })
+}
+
+exports.reddithot = function(client, guild){
+    guild.channels.forEach(function(channel){
+        name = channel.name;
+        if(name.split("_")[1] == "reddit"){
+            var url = 'https://reddit.com/r/' + name.split("_")[0] + '/hot.json'
+            var n = Math.random() * (22 - 2) + 2;
+            request(url, function(error, response, body) {
+                if(!error && response.statusCode == 200){
+                    link = JSON.parse(body).data.children[n].data.url;
+                    channel.send(link);
+                    console.log("sent " + link + " to " + channel.id);
+                }
+            });
         }
     })
 }
