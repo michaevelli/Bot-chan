@@ -47,7 +47,7 @@ exports.reddithot = function(client, guild){
             var n = Math.random() * (22 - 2) + 2;
             request(url, function(error, response, body) {
                 if(!error && response.statusCode == 200){
-                    link = JSON.parse(body).data.children[n].data.url;
+                    link = JSON.parse(body).data.children[2].data.url;
                     channel.send(link);
                     console.log("sent " + link + " to " + channel.id);
                 }
