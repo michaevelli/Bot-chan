@@ -26,8 +26,8 @@ exports.redditplus = function(client, guild, score){
             while(vote < score){
                 request(url, function(error, response, body) {
                     if(!error && response.statusCode == 200){
-                        vote = JSON.parse(body)[0].data.children[0].data.score;
-                        link = JSON.parse(body)[0].data.children[0].data.url;
+                        vote = JSON.parse(body).data.children[0].data.score;
+                        link = JSON.parse(body).data.children[0].data.url;
                     }
                     return;
                 });
