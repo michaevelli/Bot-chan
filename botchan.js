@@ -71,7 +71,7 @@ setTimeout (function(){
         if((d.getUTCHours() == 11 || d.getUTCHours() == 23) && d.getUTCMinutes() == 0){
             reddit.redditrandom(client, client.guilds.find("id", "265767904065224717"));
         }
-        if(d.getUTCMinutes() == 24 ){
+        if(d.getUTCMinutes() == 0 && d.getUTCHours()%2 == 0){
             reddit.reddithot(client, client.guilds.find("id","167895139518382081"));
         }
     }, 60000);
