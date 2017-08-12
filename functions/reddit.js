@@ -15,7 +15,7 @@ exports.redditrandom = function(client, guild){
         }
     })
 }
-
+/* causes memory errors. Do not use
 exports.redditplus = function(client, guild, score){
     guild.channels.forEach(function(channel){
         name = channel.name;
@@ -38,7 +38,7 @@ exports.redditplus = function(client, guild, score){
         }
     })
 }
-
+*/
 exports.reddithot = function(client, guild){
     guild.channels.forEach(function(channel){
         name = channel.name;
