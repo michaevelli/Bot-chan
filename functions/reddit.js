@@ -1,5 +1,4 @@
 const request = require('request');
-const random = require('random');
 
 exports.redditrandom = function(client, guild){
     guild.channels.forEach(function(channel){
