@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
             message.channel.send("Locked all voice channels!");
         } else if(args[0] == "unlock"){
             for(i = 0; i < list.length; i++){
-                list[i].overwritePermissions(message.guild.roles.find("name", "@everyone"), {});
+                list[i].overwritePermissions(message.guild.roles.find("name", "@everyone"), {'CONNECT': null});
             }
             message.channel.send("Unlocked all voice channels!");
         } else {
@@ -35,7 +35,7 @@ exports.run = (client, message, args) => {
         channel.overwritePermissions(message.guild.roles.find("name", "@everyone"), {'CONNECT': false});
         message.channel.send("Locking " + channel.name).catch(console.error);
     } else if (args[0] == "unlock"){
-        channel.overwritePermissions(message.guild.roles.find("name", "@everyone"), {});
+        channel.overwritePermissions(message.guild.roles.find("name", "@everyone"), {'CONNECT': null});
         message.channel.send("Unlocking " + channel.name).catch(console.error);
     } else {
         message.channel.send("Invalid Syntax```Usage: ~/vc <lock|unlock> [-a]```");
