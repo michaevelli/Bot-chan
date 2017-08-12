@@ -29,6 +29,7 @@ exports.redditplus = function(client, guild, score){
                         vote = JSON.parse(body)[0].data.children[0].data.score;
                         link = JSON.parse(body)[0].data.children[0].data.url;
                     }
+                    return;
                 });
             }
             channel.send(link);
