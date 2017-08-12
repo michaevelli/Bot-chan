@@ -33,6 +33,7 @@ exports.redditplus = function(client, guild, score){
             }
             channel.send(link);
             console.log("sent " + link + " to " + channel.id);
+            console.log(vote);
         }
     })
 }
