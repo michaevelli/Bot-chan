@@ -52,6 +52,7 @@ client.login(config.token);
 
 
 //colorchange
+/*
 setTimeout (function(){
     var interval = setInterval (function(){
         client.guilds.forEach(function(guild){
@@ -62,7 +63,7 @@ setTimeout (function(){
         });
     }, 100);
 },2000);
-
+*/
 
 setTimeout (function(){
     var interval2 = setInterval (function(){
@@ -71,10 +72,11 @@ setTimeout (function(){
             reddit.redditrandom(client, client.guilds.find("id", "265767904065224717"));
         }
         if(d.getUTCMinutes() == 0){
-            reddit.redditrandom(client, client.guilds.find("id","167895139518382081"));
+            reddit.redditplus(client, client.guilds.find("id","167895139518382081"), 100);
         }
     }, 60000);
 },2000);
+
 
 var express = require('express');
 var app     = express();
