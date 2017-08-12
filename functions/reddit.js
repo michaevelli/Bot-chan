@@ -44,10 +44,10 @@ exports.reddithot = function(client, guild){
         name = channel.name;
         if(name.split("_")[1] == "reddit"){
             var url = 'https://reddit.com/r/' + name.split("_")[0] + '/hot.json'
+            var n = Math.random() * (22 - 2) + 2;
             request(url, function(error, response, body) {
-                var n = Math.random() * (22 - 2) + 2;
                 if(!error && response.statusCode == 200){
-                    link = JSON.parse(body).data.children[n].data.url;
+                    link = JSON.parse(body).data.children[parseInt(n)].data.url;
                     channel.send(link);
                     console.log("sent " + link + " to " + channel.id);
                 }
