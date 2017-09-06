@@ -91,7 +91,7 @@ app.get('/', function(request, response) {
 
 
 //ping self to prevent timeout
-/* unnecessary when runnning in bot mode
+/* unnecessary when runnning in bot mode*/
 var http = require("http");
 var pinger = setInterval(function() {
     var d = new Date();
@@ -104,4 +104,3 @@ var pinger = setInterval(function() {
         }
     }
 }, 600000);
-*/
